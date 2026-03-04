@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- ===============================================
+       ★ 서버 업로드 후 아래 3줄만 실제 URL로 교체하세요
+       =============================================== -->
+  <!-- 1) 페이지 URL -->
+  <meta property="og:url" content="https://muttul58-coder.github.io/Invitation_mobile/" />
+  <!-- 2) 미리보기 썸네일 이미지 URL (1200×630px 권장) -->
+  <meta property="og:image" content="https://muttul58-coder.github.io/Invitation_mobile/thumb.jpg" />
+  <!-- 3) 페이지 제목 (카톡 미리보기에 표시) -->
+  <meta property="og:title" content="🎊 구순(九十壽) 잔치에 초대합니다" />
+
+  <!-- 카카오톡 미리보기 설명문 -->
+  <meta property="og:description" content="2026년 4월 4일(토) 낮 12시 · 아버지의 구순을 함께 축하해 주세요. 김현숙, 김현미, 김현석 🌸" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- 카카오톡은 og:image를 썸네일로 사용합니다 -->
+  <!-- 썸네일이 없으면 미리보기에 이미지 없이 제목+설명만 표시됩니다 -->
+
+  <title>🎊 구순 잔치 초대장 — 만수무강을 기원합니다</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── 기본 리셋 ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #c9952a;
+      --gold-light: #e8c97a;
+      --gold-pale:  #f5e9c4;
+      --red-deep:   #8b1a1a;
+      --text-dark:  #2a1a0e;
+      --text-mid:   #5a3e28;
+    }
+
+    /* ── 전체 배경 (모란 패턴) ── */
+    html {
+      min-height: 100%;
+      background: #1a0d00;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background: #1a0d00;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Ccircle cx='110' cy='110' r='90' fill='none' stroke='%23c9952a' stroke-width='0.6' opacity='0.2'/%3E%3Ccircle cx='110' cy='110' r='65' fill='none' stroke='%23c9952a' stroke-width='0.5' opacity='0.15'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(0 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(60 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(120 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(180 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(240 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(300 110 110)'/%3E%3Ccircle cx='110' cy='110' r='14' fill='%23e8c97a' opacity='0.15'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Ccircle cx='110' cy='110' r='90' fill='none' stroke='%23c9952a' stroke-width='0.6' opacity='0.2'/%3E%3Ccircle cx='110' cy='110' r='65' fill='none' stroke='%23c9952a' stroke-width='0.5' opacity='0.15'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(0 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(60 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(120 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(180 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(240 110 110)'/%3E%3Cellipse cx='110' cy='50' rx='18' ry='28' fill='%23c9952a' opacity='0.09' transform='rotate(300 110 110)'/%3E%3Ccircle cx='110' cy='110' r='14' fill='%23e8c97a' opacity='0.15'/%3E%3C/svg%3E");
+      background-size: 220px 220px, 220px 220px;
+      background-position: 0 0, 110px 110px;
+      font-family: 'Noto Serif KR', serif;
+      padding: 24px 16px 48px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* ── 카드 컨테이너 ── */
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(160deg, #fdf3dc 0%, #fae8bb 45%, #f5dea0 100%);
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(201,149,42,0.7),
+        0 0 0 5px rgba(201,149,42,0.18),
+        0 24px 64px rgba(0,0,0,0.55);
+      animation: rise 1s cubic-bezier(.22,.68,0,1.2) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* ── 헤더 ── */
+    .header {
+      position: relative;
+      background: linear-gradient(150deg, #5c0a0a 0%, #8b1a1a 40%, #a52020 70%, #6b0f0f 100%);
+      padding: 40px 20px 32px;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* 헤더 내부 구름 패턴 */
+    .header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60px 20px at 12% 60%, rgba(232,201,122,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 45px 16px at 88% 55%, rgba(232,201,122,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 30px 10px at 50% 15%, rgba(232,201,122,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    /* 헤더 금빛 테두리 */
+    .header::after {
+      content: '';
+      position: absolute; inset: 8px;
+      border: 1px solid rgba(232,201,122,0.3);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #c9952a, #e8c97a, #c9952a);
+      color: #5c0a0a;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 5px 20px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+      animation: rise 1s ease 0.15s both;
+    }
+
+    .hanja {
+      font-size: 48px;
+      color: #e8c97a;
+      letter-spacing: 10px;
+      line-height: 1;
+      text-shadow: 0 0 40px rgba(232,201,122,0.4), 2px 3px 10px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
+      animation: rise 1s ease 0.25s both;
+    }
+
+    .subtitle {
+      font-size: 13.5px;
+      color: rgba(245,233,196,0.82);
+      letter-spacing: 4px;
+      font-weight: 300;
+      animation: rise 1s ease 0.35s both;
+    }
+
+    /* ── 구분선 ── */
+    .sep {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 24px; margin: 24px 0 20px;
+    }
+    .sep-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,149,42,0.7), transparent);
+    }
+    .sep-icon { color: var(--gold); font-size: 14px; line-height: 1; }
+
+    /* ── 본문 ── */
+    .body { padding: 0 28px 28px; }
+
+    /* ── 인삿말 ── */
+    .greeting {
+      text-align: center;
+      margin-bottom: 26px;
+      animation: rise 1s ease 0.45s both;
+    }
+    .greeting-title {
+      font-size: 16px;
+      color: var(--red-deep);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    .greeting-text {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2.1;
+      font-weight: 300;
+      word-break: keep-all;
+    }
+
+    /* ── 정보 박스 ── */
+    .info-box {
+      position: relative;
+      background: linear-gradient(135deg,
+        rgba(139,26,26,0.05) 0%,
+        rgba(201,149,42,0.07) 100%);
+      border: 1px solid rgba(201,149,42,0.45);
+      border-radius: 2px;
+      padding: 20px 20px;
+      margin-bottom: 16px;
+      animation: rise 1s ease 0.55s both;
+    }
+    /* 모서리 장식 */
+    .info-box::before { content: '◈'; position: absolute; top: 7px; left: 9px; color: var(--gold); font-size: 9px; opacity: 0.55; }
+    .info-box::after  { content: '◈'; position: absolute; bottom: 7px; right: 9px; color: var(--gold); font-size: 9px; opacity: 0.55; }
+
+    .info-row {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(201,149,42,0.18);
+    }
+    .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .info-row:first-child { padding-top: 0; }
+
+    .i-icon { font-size: 15px; width: 20px; text-align: center; flex-shrink: 0; padding-top: 2px; }
+    .i-label {
+      font-size: 10px; color: var(--gold); font-weight: 700;
+      letter-spacing: 1.5px; width: 32px; flex-shrink: 0; padding-top: 3px;
+    }
+    .i-val {
+      font-size: 13.5px; color: var(--text-dark);
+      font-weight: 400; line-height: 1.7; flex: 1;
+    }
+    .i-val small {
+      display: block;
+      font-size: 11.5px; color: var(--text-mid);
+      margin-top: 2px;
+    }
+
+    /* ── 지도 버튼 ── */
+    .map-btn {
+      display: block; width: 100%;
+      padding: 15px 12px;
+      margin-bottom: 22px;
+      background: linear-gradient(135deg, #7a0f0f, #a52020, #7a0f0f);
+      color: #e8c97a;
+      text-align: center; text-decoration: none;
+      font-size: 13.5px; font-weight: 600; letter-spacing: 2px;
+      border-radius: 2px;
+      border: 1px solid rgba(201,149,42,0.5);
+      box-shadow: 0 5px 18px rgba(139,26,26,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: all 0.2s ease;
+      animation: rise 1s ease 0.65s both;
+      /* 모바일 탭 영역 확보 */
+      -webkit-tap-highlight-color: rgba(201,149,42,0.2);
+    }
+    .map-btn:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 8px rgba(139,26,26,0.3);
+    }
+
+    /* ── 전화 버튼 ── */
+    .tel-btn {
+      display: block; width: 100%;
+      padding: 13px 12px;
+      margin-bottom: 24px;
+      background: transparent;
+      color: var(--text-mid);
+      text-align: center; text-decoration: none;
+      font-size: 13px; font-weight: 400; letter-spacing: 1px;
+      border-radius: 2px;
+      border: 1px solid rgba(201,149,42,0.35);
+      transition: all 0.2s ease;
+      animation: rise 1s ease 0.7s both;
+      -webkit-tap-highlight-color: rgba(201,149,42,0.1);
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .tel-btn:active { background: rgba(201,149,42,0.08); }
+
+    /* ── 서명 ── */
+    .signature {
+      text-align: center;
+      animation: rise 1s ease 0.75s both;
+    }
+    .sig-names {
+      font-size: 13px; color: var(--text-mid);
+      letter-spacing: 3px; line-height: 1.9;
+    }
+    .sig-sub {
+      font-size: 10.5px; color: var(--gold);
+      letter-spacing: 4px; margin-top: 3px;
+    }
+
+    /* ── 하단 연락처 배너 ── */
+    .footer {
+      background: linear-gradient(135deg, #1e0e00, #2f1800);
+      padding: 18px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(201,149,42,0.4);
+      animation: rise 1s ease 0.85s both;
+    }
+    .footer-date {
+      font-size: 12px;
+      color: rgba(245,233,196,0.5);
+      letter-spacing: 2px;
+      font-family: 'Noto Sans KR', sans-serif;
+      margin-bottom: 4px;
+    }
+    .footer-place {
+      font-size: 11px;
+      color: rgba(232,201,122,0.65);
+      letter-spacing: 1px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    /* ── 모란꽃 좌우 장식 ── */
+    .deco {
+      position: absolute;
+      width: 72px; opacity: 0.12; pointer-events: none;
+    }
+    .deco-l { bottom: 62px; left: -8px; transform: rotate(-18deg); }
+    .deco-r { bottom: 62px; right: -8px; transform: rotate(18deg) scaleX(-1); }
+
+    /* ── 반응형 (아주 작은 화면) ── */
+    @media (max-width: 360px) {
+      .hanja { font-size: 40px; letter-spacing: 7px; }
+      .body  { padding: 0 18px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- ▶ 상단 헤더 -->
+    <div class="header">
+      <div class="badge">九旬 · 구순</div>
+      <div class="hanja">九十壽</div>
+      <div class="subtitle">만수무강을 기원합니다</div>
+    </div>
+
+    <!-- ▶ 본문 -->
+    <div class="body">
+
+      <div class="sep">
+        <div class="sep-line"></div>
+        <div class="sep-icon">✦</div>
+        <div class="sep-line"></div>
+      </div>
+
+      <!-- 인삿말 -->
+      <div class="greeting">
+        <div class="greeting-title">구순, 만수무강을 기원합니다</div>
+        <div class="greeting-text">
+          아흔 번의 봄을 지나,<br>
+          구순을 맞이하신 아버지의 뜻깊은 날입니다.<br><br>
+          우리 가족의 버팀목이 되어주신 아버지의<br>
+          깊은 사랑에 감사드리며,<br>
+          건강하게 오래오래 곁에 계셔주길 바라는<br>
+          마음으로 작은 파티를 엽니다.<br><br>
+          맛있는 식사와 함께 기쁨을 나누는 자리에<br>
+          소중한 분들을 초대합니다.
+        </div>
+      </div>
+
+      <div class="sep">
+        <div class="sep-line"></div>
+        <div class="sep-icon">❀</div>
+        <div class="sep-line"></div>
+      </div>
+
+      <!-- 일정 정보 -->
+      <div class="info-box">
+        <div class="info-row">
+          <div class="i-icon">📅</div>
+          <div class="i-label">일시</div>
+          <div class="i-val">2026년 4월 4일 (토)</div>
+        </div>
+        <div class="info-row">
+          <div class="i-icon">🕛</div>
+          <div class="i-label">시간</div>
+          <div class="i-val">오전 12:00 (정오)</div>
+        </div>
+        <div class="info-row">
+          <div class="i-icon">📍</div>
+          <div class="i-label">장소</div>
+          <div class="i-val">
+            이리스 웨딩홀&amp;뷔페
+            <small>부산 부산진구 서면로 25<br>서면삼한골든뷰 13층~14층</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- 네이버 지도 버튼 -->
+      <a class="map-btn" href="https://naver.me/565Asjjr" target="_blank">
+        🗺&nbsp; 네이버 지도로 찾아오기
+      </a>
+
+      <!-- 전화 버튼 -->
+      <a class="tel-btn" href="tel:01023831579">
+        📞&nbsp; 문의 · 010-2383-1579
+      </a>
+
+      <div class="sep">
+        <div class="sep-line"></div>
+        <div class="sep-icon">✦</div>
+        <div class="sep-line"></div>
+      </div>
+
+      <!-- 서명 -->
+      <div class="signature">
+        <div class="sig-names">김현숙 · 김현미 · 김현석</div>
+        <div class="sig-sub">자녀 일동 배상</div>
+      </div>
+
+    </div><!-- /body -->
+
+    <!-- 모란꽃 장식 -->
+    <svg class="deco deco-l" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(0 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(45 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(90 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(135 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(180 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(225 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(270 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(315 50 55)"/>
+      <circle cx="50" cy="55" r="11" fill="#e8c97a"/>
+    </svg>
+    <svg class="deco deco-r" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(0 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(45 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(90 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(135 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(180 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(225 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(270 50 55)"/>
+      <ellipse cx="50" cy="18" rx="13" ry="21" fill="#c9952a" transform="rotate(315 50 55)"/>
+      <circle cx="50" cy="55" r="11" fill="#e8c97a"/>
+    </svg>
+
+    <!-- ▶ 하단 -->
+    <div class="footer">
+      <div class="footer-date">2026. 04. 04 (토) · 12:00</div>
+      <div class="footer-place">이리스 웨딩홀&amp;뷔페 · 부산 서면</div>
+    </div>
+
+  </div><!-- /card -->
+
+</body>
+</html>
